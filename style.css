@@ -1,0 +1,83 @@
+/* Variables */
+:root {
+  --bg-color: #fd4646;
+  --char-color: #fff;
+  --obset-color: #171427;
+}
+/* Global Rulez */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* ############################################## */
+.game-container{
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 50px;
+  border: 5px solid black;
+  background-color: var(--bg-color);
+}
+.character{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 400px;
+  left: 120px;
+  border-radius: 50%;
+  z-index: 1000;
+  background-color: var(--char-color);
+}
+.block{
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  background-color: var(--obset-color);
+  animation: moveDown 5s linear forwards;
+}
+.hole{
+  width: 70px;
+  height: 20px;
+  position: absolute;
+  background-color: var(--bg-color);
+  animation: moveDown 5s linear forwards;
+}
+@keyframes moveDown {
+  0%{
+    top: 0px;
+  }
+  100%{
+    top: 100%;
+    display: none;
+    visibility: hidden;
+  }
+}
+
